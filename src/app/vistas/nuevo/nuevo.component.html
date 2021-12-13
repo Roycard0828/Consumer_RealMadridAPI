@@ -1,0 +1,24 @@
+<app-header></app-header>
+
+<div class="container">
+    <form [formGroup] = "nuevoForm" (ngSubmit) = "postForm(nuevoForm.value)">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Name</label>
+            <input type="text" class="form-control" placeholder="Player name" formControlName="name">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Posicion</label>
+            <input type="text" class="form-control" placeholder="Player posicion" formControlName="posicion">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Age</label>
+            <input type="text" class="form-control" placeholder="Player age" formControlName="age">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="submit" class="btn btn-primary" (click) = "salir()">Exit</button>
+    </form>
+</div>
+
+
+<app-footer></app-footer>

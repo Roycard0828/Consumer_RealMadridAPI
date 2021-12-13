@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+<br><br>
+<div class="container">
+  <h1>Players List</h1>
+  <br>
+  <button type="button" class="btn btn-dark" (click)="entrar()">Add Player</button>
+  <br>
+  <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Posicion</th>
+          <th scope="col">Edad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let player of players">
+          <th scope="row">{{ player.id }}</th>
+          <td>{{player.name}}</td>
+          <td>{{player.posicion}}</td>
+          <td>{{player.age}}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>  
+
+<app-footer></app-footer>
